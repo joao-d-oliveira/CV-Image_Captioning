@@ -1,9 +1,6 @@
 import torch
 import torch.nn as nn
 import torchvision.models as models
-from collections import OrderedDict
-import torch.nn.functional as F
-from torch.nn.utils.rnn import pack_padded_sequence
 
 
 class EncoderCNN(nn.Module):
@@ -26,24 +23,11 @@ class EncoderCNN(nn.Module):
 
 class DecoderRNN(nn.Module):
     def __init__(self, embed_size, hidden_size, vocab_size, num_layers=1):
-        super().__init__()
-        self.embedding_layer = nn.Embedding(vocab_size, embed_size)
-        
-        self.lstm = nn.LSTM(input_size = embed_size,hidden_size = hidden_size,
-                            num_layers = num_layers, batch_first = True)
-        
-        self.linear = nn.Linear(hidden_size, vocab_size)
+        pass
     
     def forward(self, features, captions):
-        captions = captions[:, :-1]
-        embed = self.embedding_layer(captions)
-        embed = torch.cat((features.unsqueeze(1), embed), dim = 1)
-        lstm_outputs, _ = self.lstm(embed)
-        out = self.linear(lstm_outputs)
-        
-        return out
-    
-    
+        pass
+
     def sample(self, inputs, states=None, max_len=20):
         " accepts pre-processed image tensor (inputs) and returns predicted sentence (list of tensor ids of length max_len) "
         pass
