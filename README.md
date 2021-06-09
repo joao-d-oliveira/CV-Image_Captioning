@@ -10,7 +10,7 @@ TBC
 # Instructions
 
 ## Submission Files
-* :exclamation:`0_Dataset.ipynb`
+* :white_check_mark:❗`models.py`
 * :exclamation:`1_Preliminaries.ipynb`
 * :exclamation:`2_Training.ipynb`
 * :exclamation:`3_Inference.ipynb`
@@ -22,8 +22,8 @@ TBC
 #### Specify the CNNEncoder and RNNDecoder
 | Criteria       		|     Meets Specifications	        			            | 
 |:---------------------|:---------------------------------------------------------:| 
-| :exclamation: `CNNEncoder`. |  The chosen CNN architecture in the `CNNEncoder` class in **model.py** makes sense as an encoder for the image captioning task.|
-| :exclamation: `RNNDecoder`. |  The chosen RNN architecture in the `RNNDecoder` class in **model.py** makes sense as a decoder for the image captioning task.|
+|  :white_check_mark:❗ `CNNEncoder`. |  The chosen CNN architecture in the `CNNEncoder` class in **model.py** makes sense as an encoder for the image captioning task.|
+| :white_check_mark:❗ `RNNDecoder`. |  The chosen RNN architecture in the `RNNDecoder` class in **model.py** makes sense as a decoder for the image captioning task.|
 
 
 ### 2_Training.ipynb
@@ -53,6 +53,8 @@ TBC
 
 
 ## Bonus :boom::boom::boom:
+* ❗ Different pre-trained model architecture (CNN) (added by me)
+* ❗ You may also like to add batch normalization. (added by me)
 * ❗ Use the validation set to guide your search for appropriate hyperparameters.
 * ❗ Implement beam search to generate captions on new images.
 * ❗ Tinker with your model - and train it for long enough - to obtain results that are comparable to (or surpass!) recent research articles
