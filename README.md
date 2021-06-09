@@ -10,7 +10,7 @@ TBC
 # Instructions
 
 ## Submission Files
-* :exclamation:`0_Dataset.ipynb`
+* :white_check_mark:❗`models.py`
 * :exclamation:`1_Preliminaries.ipynb`
 * :exclamation:`2_Training.ipynb`
 * :exclamation:`3_Inference.ipynb`
