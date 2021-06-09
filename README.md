@@ -22,8 +22,8 @@ TBC
 #### Specify the CNNEncoder and RNNDecoder
 | Criteria       		|     Meets Specifications	        			            | 
 |:---------------------|:---------------------------------------------------------:| 
-| :exclamation: `CNNEncoder`. |  The chosen CNN architecture in the `CNNEncoder` class in **model.py** makes sense as an encoder for the image captioning task.|
-| :exclamation: `RNNDecoder`. |  The chosen RNN architecture in the `RNNDecoder` class in **model.py** makes sense as a decoder for the image captioning task.|
+|  :white_check_mark:❗ `CNNEncoder`. |  The chosen CNN architecture in the `CNNEncoder` class in **model.py** makes sense as an encoder for the image captioning task.|
+| :white_check_mark:❗ `RNNDecoder`. |  The chosen RNN architecture in the `RNNDecoder` class in **model.py** makes sense as a decoder for the image captioning task.|
 
 
 ### 2_Training.ipynb
