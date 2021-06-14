@@ -37,7 +37,7 @@ def get_loader(transform,
       cocoapi_loc: The location of the folder containing the COCO API: https://github.com/cocodataset/cocoapi
     """
     
-    assert mode in ['train', 'test'], "mode must be one of 'train' or 'test'."
+    assert mode in ['train', 'test', 'val'], "mode must be one of 'train', 'test' or 'val'."
     if vocab_from_file==False: assert mode=='train', "To generate vocab from captions file, must be in training mode (mode='train')."
 
     # Based on mode (train, val, test), obtain img_folder and annotations_file.
@@ -51,6 +51,13 @@ def get_loader(transform,
         assert vocab_from_file==True, "Change vocab_from_file to True."
         img_folder = os.path.join(cocoapi_loc, 'cocoapi/images/test2014/')
         annotations_file = os.path.join(cocoapi_loc, 'cocoapi/annotations/image_info_test2014.json')
+    if mode == 'val':
+        assert batch_size==1, "Please change batch_size to 1 if validating your model."
+        assert os.path.exists(vocab_file), "Must first generate vocab.pkl from training data."
+        assert vocab_from_file==True, "Change vocab_from_file to True."
+        annotationsFileLOC = 'cocoapi/annotations/captions_val2014.json'
+        img_folder = os.path.join(cocoapi_loc, 'cocoapi/images/val2014/')
+        annotations_file = os.path.join(cocoapi_loc, annotationsFileLOC)
 
     # COCO caption dataset.
     dataset = CoCoDataset(transform=transform,
@@ -88,6 +95,7 @@ class CoCoDataset(data.Dataset):
     
     def __init__(self, transform, mode, batch_size, vocab_threshold, vocab_file, start_word, 
         end_word, unk_word, annotations_file, vocab_from_file, img_folder):
+        import os
         self.transform = transform
         self.mode = mode
         self.batch_size = batch_size
@@ -100,9 +108,17 @@ class CoCoDataset(data.Dataset):
             print('Obtaining caption lengths...')
             all_tokens = [nltk.tokenize.word_tokenize(str(self.coco.anns[self.ids[index]]['caption']).lower()) for index in tqdm(np.arange(len(self.ids)))]
             self.caption_lengths = [len(token) for token in all_tokens]
-        else:
+        elif self.mode == 'test':
             test_info = json.loads(open(annotations_file).read())
-            self.paths = [item['file_name'] for item in test_info['images']]
+            self.paths = [item['file_name'] for item in test_info['images'] if os.path.exists(os.path.join(self.img_folder, item['file_name']))]
+        else:
+            val_data = json.loads(open(annotations_file).read())
+            img_data = val_data['images']
+            ann_data = val_data['annotations']
+            self.dict_images = {f['id']:f['file_name'] for f in img_data}
+            self.ids = [f['id'] for f in img_data]
+            self.dict_captions = {f['image_id']:f['caption'] for f in ann_data}
+
         
     def __getitem__(self, index):
         # obtain image and caption if in training mode
@@ -128,7 +144,7 @@ class CoCoDataset(data.Dataset):
             return image, caption
 
         # obtain image if in test mode
-        else:
+        elif self.mode == 'test':
             path = self.paths[index]
 
             # Convert image to tensor and pre-process using transform
@@ -138,6 +154,19 @@ class CoCoDataset(data.Dataset):
 
             # return original image and pre-processed image tensor
             return orig_image, image
+        else:
+            # obtain image and caption if in training mode
+            idImage = self.ids[index]
+            path = self.dict_images[idImage]
+            caption = self.dict_captions[idImage]
+
+            # Convert image to tensor and pre-process using transform
+            PIL_image = Image.open(os.path.join(self.img_folder, path)).convert('RGB')
+            orig_image = np.array(PIL_image)
+            image = self.transform(PIL_image)
+
+            # return original image and pre-processed image tensor
+            return idImage, orig_image, image, caption
 
     def get_train_indices(self):
         sel_length = np.random.choice(self.caption_lengths)
@@ -146,7 +175,7 @@ class CoCoDataset(data.Dataset):
         return indices
 
     def __len__(self):
-        if self.mode == 'train':
+        if self.mode == 'train' or self.mode == 'val':
             return len(self.ids)
         else:
             return len(self.paths)
