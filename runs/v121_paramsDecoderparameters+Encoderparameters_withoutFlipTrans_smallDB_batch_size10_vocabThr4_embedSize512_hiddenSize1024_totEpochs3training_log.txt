@@ -1,0 +1,2 @@
+RUN_KEY: v1.2.1_params:Decoderparameters+Encoderparameters_withoutFlipTrans_smallDB_batch_size:10_vocabThr:4_embedSize:512_hiddenSize:1024_totEpochs:3
+RUN_KEY: v1.2.1_params:Decoderparameters+Encoderparameters_withoutFlipTrans_smallDB_batch_size:10_vocabThr:4_embedSize:512_hiddenSize:1024_totEpochs:3
