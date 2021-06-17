@@ -1,11 +1,15 @@
 # About
 Project from Udacity. <br>
-Final project from 1st Section 
+Final project from 3rd Section 
 Original [GitHub project](https://github.com/udacity/CVND---Image-Captioning-Project)
 
 
 # Aproach
-TBC
+* Started with a simple DecoderRNN of: 1 Embedding Layer -> LSTM -> Linear
+* Tried to add an attention layer after LSTM: 1 Embedding Layer -> LSTM -> MultiHeadAttention -> Linear
+* Tried to add an attention layer before LSTM: 1 Embedding Layer -> MultiHeadAttention -> LSTM -> Linear
+* Found in the internet literature on best case performances and how they did it. Particularly found [GitHub Example](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning) as well as [this medium tutorial](https://medium.com/analytics-vidhya/image-captioning-with-attention-part-1-e8a5f783f6d3)
+* Compared performance of all models with an excelent example from: [here](https://medium.com/analytics-vidhya/image-captioning-with-attention-part-1-e8a5f783f6d3)
 
 # Instructions
 
@@ -13,7 +17,7 @@ TBC
 * :white_check_mark:`models.py`
 * :white_check_mark:`1_Preliminaries.ipynb`
 * :white_check_mark:`2_Training.ipynb`
-* :white_check_mark::exclamation:`3_Inference.ipynb`
+* :white_check_mark:`3_Inference.ipynb`
 
 ## Project Rubric [link_original](https://review.udacity.com/#!/rubrics/1427/view)
 
@@ -44,7 +48,7 @@ TBC
 | :white_check_mark:`transform_test` |  The transform used to pre-process the test images is congruent with the choice of CNN architecture. It is also consistent with the transform specified in `transform_train` in **2_Training.ipynb**.| 
 | :white_check_mark:Step 3 | The implementation of the `sample` method in the `RNNDecoder` class correctly leverages the RNN to generate predicted token indices.| 
 | :white_check_mark:Step 4 | The `clean_sentence` function passes the test in **Step 4**. The sentence is reasonably clean, where any `<start>` and `<end>` tokens have been removed.| 
-| :white_check_mark:❗ Step 5 | The submission shows two image-caption pairs where the model performed well, and two image-caption pairs where the model did not perform well.| 
+| :white_check_mark: Step 5 | The submission shows two image-caption pairs where the model performed well, and two image-caption pairs where the model did not perform well.| 
 
 
 ## Recommendations
@@ -53,7 +57,6 @@ TBC
 
 
 ## Bonus :boom::boom::boom:
-* :white_check_mark:❗ Use the validation set to guide your search for appropriate hyperparameters.
+* :white_check_mark: Use the validation set to guide your search for appropriate hyperparameters.
 * :white_check_mark: Tinker with your model - and train it for long enough - to obtain results that are comparable to (or surpass!) recent research articles
 * ❗ Implement beam search to generate captions on new images.
-
