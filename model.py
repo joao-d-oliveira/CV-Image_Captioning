@@ -163,15 +163,15 @@ class DecoderRNNv102(nn.Module):
             outputs = outputs.squeeze(1)
 
             # get the word with the best ranking
-            _, max_indice = torch.max(outputs, dim=1)
+            _, found_word = torch.max(outputs, dim=1)
 
             # save new word
-            output.append(max_indice.cpu().numpy()[0].item()) # storing the word predicted
+            output.append(found_word.cpu().numpy()[0].item()) # storing the word predicted
             # In case new word is the end of the sentence... end the sampling
-            if max_indice == end_word: break
+            if found_word == end_word or len(output) > max_len: break
 
             # embed the last predicted word to predict next
-            inputs = self.embedding(max_indice)
+            inputs = self.embedding(found_word)
             inputs = inputs.unsqueeze(1)
 
         return output
@@ -330,14 +330,14 @@ class DecoderRNNv121(nn.Module):
             outputs = self.linear(outputs)
             outputs = outputs.squeeze(1)
 
-            _, max_indice = torch.max(outputs, dim=1) # predict the most likely next word, max_indice shape : (1)
+            _, found_word = torch.max(outputs, dim=1) # predict the most likely next word, found_word shape : (1)
             # save new word
-            output.append(max_indice.cpu().numpy()[0].item())
+            output.append(found_word.cpu().numpy()[0].item())
             # In case new word is the end of the sentence... end the sampling
-            if max_indice == end_word or len(output) > max_len: break
+            if found_word == end_word or len(output) > max_len: break
 
             # embed the last predicted word to predict next
-            inputs = self.embedding(max_indice)
+            inputs = self.embedding(found_word)
             inputs = inputs.unsqueeze(1)
 
         return output
