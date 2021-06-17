@@ -1,0 +1,233 @@
+<h1>
+<a id="user-content-about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About</h1>
+<p>Project from Udacity. <br>
+Final project from 3rd Section
+Original <a href="https://github.com/udacity/CVND---Image-Captioning-Project">GitHub project</a></p>
+<h1>
+<a id="user-content-aproach" class="anchor" href="#aproach" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Aproach</h1>
+<ul>
+<li>Started with a simple DecoderRNN of: 1 Embedding Layer -&gt; LSTM -&gt; Linear</li>
+<li>Tried to add an attention layer after LSTM: 1 Embedding Layer -&gt; LSTM -&gt; MultiHeadAttention -&gt; Linear</li>
+<li>Tried to add an attention layer before LSTM: 1 Embedding Layer -&gt; MultiHeadAttention -&gt; LSTM -&gt; Linear</li>
+<li>Found in the internet literature on best case performances and how they did it. Particularly found <a href="https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning">GitHub Example</a> as well as <a href="https://medium.com/analytics-vidhya/image-captioning-with-attention-part-1-e8a5f783f6d3" rel="nofollow">this medium tutorial</a>
+</li>
+<li>Compared performance of all models with an excelent example from: <a href="https://medium.com/analytics-vidhya/image-captioning-with-attention-part-1-e8a5f783f6d3" rel="nofollow">here</a>
+</li>
+</ul>
+<h1>
+<a id="user-content-instructions" class="anchor" href="#instructions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instructions</h1>
+<h2>
+<a id="user-content-submission-files" class="anchor" href="#submission-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Submission Files</h2>
+<ul>
+<li>
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji><code>models.py</code>
+</li>
+<li>
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji><code>1_Preliminaries.ipynb</code>
+</li>
+<li>
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji><code>2_Training.ipynb</code>
+</li>
+<li>
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji><code>3_Inference.ipynb</code>
+</li>
+</ul>
+<h2>
+<a id="user-content-project-rubric-link_original" class="anchor" href="#project-rubric-link_original" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Rubric <a href="https://review.udacity.com/#!/rubrics/1427/view" rel="nofollow">link_original</a>
+</h2>
+<h3>
+<a id="user-content-modelspy" class="anchor" href="#modelspy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>models.py</code>
+</h3>
+<h4>
+<a id="user-content-specify-the-cnnencoder-and-rnndecoder" class="anchor" href="#specify-the-cnnencoder-and-rnndecoder" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Specify the CNNEncoder and RNNDecoder</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Criteria</th>
+<th align="center">Meets Specifications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji> <code>CNNEncoder</code>.</td>
+<td align="center">The chosen CNN architecture in the <code>CNNEncoder</code> class in <strong>model.py</strong> makes sense as an encoder for the image captioning task.</td>
+</tr>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji> <code>RNNDecoder</code>.</td>
+<td align="center">The chosen RNN architecture in the <code>RNNDecoder</code> class in <strong>model.py</strong> makes sense as a decoder for the image captioning task.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+<a id="user-content-2_trainingipynb" class="anchor" href="#2_trainingipynb" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2_Training.ipynb</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Criteria</th>
+<th align="center">Meets Specifications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>Using the Data Loader</td>
+<td align="center">When using the <code>get_loader</code> function in <strong>data_loader.py</strong> to train the model, most arguments are left at their default values, as outlined in <strong>Step 1</strong> of <strong>1_Preliminaries.ipynb</strong>. In particular, the submission only (optionally) changes the values of the following arguments: <code>transform</code>, <code>mode</code>, <code>batch_size</code>, <code>vocab_threshold</code>, <code>vocab_from_file</code>.</td>
+</tr>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>Step 1, Question 1</td>
+<td align="center">The submission describes the chosen CNN-RNN architecture and details how the hyperparameters were selected.</td>
+</tr>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>Step 1, Question 2</td>
+<td align="center">The transform is congruent with the choice of CNN architecture. If the transform has been modified, the submission describes how the transform used to pre-process the training images was selected.</td>
+</tr>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>Step 1, Question 3</td>
+<td align="center">The submission describes how the trainable parameters were selected and has made a well-informed choice when deciding which parameters in the model should be trainable.</td>
+</tr>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>Step 1, Question 4</td>
+<td align="center">The submission describes how the optimizer was selected.</td>
+</tr>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>Step 2</td>
+<td align="center">The code cell in <strong>Step 2</strong> details all code used to train the model from scratch. The output of the code cell shows exactly what is printed when running the code cell. If the submission has amended the code used for training the model, it is well-organized and includes comments.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+<a id="user-content-3_inferenceipynb" class="anchor" href="#3_inferenceipynb" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3_Inference.ipynb</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Criteria</th>
+<th align="center">Meets Specifications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji><code>transform_test</code>
+</td>
+<td align="center">The transform used to pre-process the test images is congruent with the choice of CNN architecture. It is also consistent with the transform specified in <code>transform_train</code> in <strong>2_Training.ipynb</strong>.</td>
+</tr>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>Step 3</td>
+<td align="center">The implementation of the <code>sample</code> method in the <code>RNNDecoder</code> class correctly leverages the RNN to generate predicted token indices.</td>
+</tr>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>Step 4</td>
+<td align="center">The <code>clean_sentence</code> function passes the test in <strong>Step 4</strong>. The sentence is reasonably clean, where any <code>&lt;start&gt;</code> and <code>&lt;end&gt;</code> tokens have been removed.</td>
+</tr>
+<tr>
+<td align="left">
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji> Step 5</td>
+<td align="center">The submission shows two image-caption pairs where the model performed well, and two image-caption pairs where the model did not perform well.</td>
+</tr>
+</tbody>
+</table>
+<h2>
+<a id="user-content-bonus-boomboomboom" class="anchor" href="#bonus-boomboomboom" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bonus <g-emoji class="g-emoji" alias="boom" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a5.png">💥</g-emoji><g-emoji class="g-emoji" alias="boom" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a5.png">💥</g-emoji><g-emoji class="g-emoji" alias="boom" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a5.png">💥</g-emoji>
+</h2>
+<ul>
+<li>
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji> Use the validation set to guide your search for appropriate hyperparameters.</li>
+<li>
+<g-emoji class="g-emoji" alias="white_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png">✅</g-emoji> Tinker with your model - and train it for long enough - to obtain results that are comparable to (or surpass!) recent research articles</li>
+<li>
+<g-emoji class="g-emoji" alias="exclamation" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2757.png">❗</g-emoji> Implement beam search to generate captions on new images.</li>
+</ul>
+<h1>
+<a id="user-content-results" class="anchor" href="#results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Results</h1>
+<h2>
+<a id="user-content-approach" class="anchor" href="#approach" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Approach</h2>
+<p>From the varios rounds performed, I evaluated 3 different runs:
+<code>v102_paramsDecoder_withoutFlipTrans_batch_size10_vocabThr3_embedSize512_hiddenSize1024_totEpochs10 v121_paramsDecoder_withoutFlipTrans_batch_size10_vocabThr3_embedSize512_hiddenSize1024_totEpochs3 v120_paramsDecoder_withoutFlipTrans_batch_size10_vocabThr3_embedSize512_hiddenSize1024_totEpochs3</code></p>
+<p>All using the benchmark of the model found <a href="https://medium.com/analytics-vidhya/image-captioning-with-attention-part-1-e8a5f783f6d3" rel="nofollow">here</a>
+<code>v120_paramsDecoder_withoutFlipTrans_batch_size10_vocabThr3_embedSize512_hiddenSize1024_totEpochs3</code></p>
+<h2>
+<a id="user-content-final-results" class="anchor" href="#final-results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Final Results</h2>
+<p><strong>Benchmark</strong> (<code>v200_paramsDecoder_withoutFlipTrans_batch_size10_vocabThr4_embedSize512_hiddenSize1024_totEpochs10</code>)</p>
+<ul>
+<li>Attention: 2 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 0.9943724833842694; Bleu_1: 0.679; Bleu_2: 0.496; Bleu_3: 0.344; Bleu_4: 0.232; METEOR: 0.211; ROUGE_L: 0.491; CIDEr: 0.639</p>
+</blockquote>
+<ul>
+<li>Attention: 3 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 1.0094033452608777; Bleu_1: 0.659; Bleu_2: 0.484; Bleu_3: 0.339; Bleu_4: 0.232; ; METEOR: 0.214; ROUGE_L: 0.488; CIDEr: 0.640</p>
+</blockquote>
+<p><strong>Best and most Simple</strong> (<code>v102_paramsDecoder_withoutFlipTrans_batch_size10_vocabThr3_embedSize512_hiddenSize1024_totEpochs10</code>)</p>
+<ul>
+<li>my simple model - 1 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 1.009220942322141; Bleu_1: 0.587; Bleu_2: 0.383; Bleu_3: 0.244; Bleu_4: 0.157; METEOR: 0.182; ROUGE_L: 0.424; CIDEr: 0.507</p>
+</blockquote>
+<ul>
+<li>my simple model - 2 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 1.0005286538264253; Bleu_1: 0.616; Bleu_2: 0.416; Bleu_3: 0.275; Bleu_4: 0.183; METEOR: 0.192; ROUGE_L: 0.442; CIDEr: 0.574</p>
+</blockquote>
+<ul>
+<li>my simple model - 3 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 1.014850954868193; Bleu_1: 0.637; Bleu_2: 0.449; Bleu_3: 0.306; Bleu_4: 0.209; METEOR: 0.211; ROUGE_L: 0.466; CIDEr: 0.667</p>
+</blockquote>
+<ul>
+<li>my simple model - 4 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 1.0104244476961306; Bleu_1: 0.636 Bleu_2: 0.448; Bleu_3: 0.305; Bleu_4: 0.209; METEOR: 0.210; ROUGE_L: 0.464; CIDEr: 0.669</p>
+</blockquote>
+<ul>
+<li>my simple model - 5 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 1.012540160924407; Bleu_1: 0.632; Bleu_2: 0.446; Bleu_3: 0.306; Bleu_4: 0.211; METEOR: 0.213; ROUGE_L: 0.466; CIDEr: 0.668</p>
+</blockquote>
+<p><strong>Attention Before LSTM</strong> (<code>v121_paramsDecoder_withoutFlipTrans_batch_size10_vocabThr3_embedSize512_hiddenSize1024_totEpochs3</code>)</p>
+<ul>
+<li>my att first model - 1 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 1.102866731062698; Bleu_1: 0.357; Bleu_2: 0.179; Bleu_3: 0.065; Bleu_4: 0.029; METEOR: 0.091; ROUGE_L: 0.285; CIDEr: 0.037</p>
+</blockquote>
+<ul>
+<li>my att first model - 2 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 0.706783945336399; Bleu_1: 0.205; Bleu_2: 0.091; Bleu_3: 0.032; Bleu_4: 0.014; METEOR: 0.050; ROUGE_L: 0.174; CIDEr: 0.015</p>
+</blockquote>
+<p><strong>Attention After LSTM</strong> (<code>v120_paramsDecoder_withoutFlipTrans_batch_size10_vocabThr3_embedSize512_hiddenSize1024_totEpochs3</code>)</p>
+<ul>
+<li>my att aft model - 1 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 0.33351825744295616; Bleu_1: 0.052; Bleu_2: 0.034; Bleu_3: 0.021; Bleu_4: 0.014; METEOR: 0.037; ROUGE_L: 0.101; CIDEr: 0.071</p>
+</blockquote>
+<ul>
+<li>my att aft model - 2 epochs:</li>
+</ul>
+<blockquote>
+<p>ratio: 0.21256804304037424; Bleu_1: 0.005; Bleu_2: 0.005; Bleu_3: 0.004; Bleu_4: 0.002; METEOR: 0.014; ROUGE_L: 0.034; CIDEr: 0.029</p>
+</blockquote>
+<h2>
+<a id="user-content-thoughts" class="anchor" href="#thoughts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thoughts</h2>
+<p>My best model is clearly 1.0.2 (although simple), proved to be better than adding a multihead attention.
+And performance wise is close to the most complicated one used to benchmark.</p>
+
