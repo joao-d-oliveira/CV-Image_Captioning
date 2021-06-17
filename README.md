@@ -81,9 +81,9 @@ All using the benchmark of the model found [here](https://medium.com/analytics-v
 * my simple model - 3 epochs:
 > ratio: 1.014850954868193; Bleu_1: 0.637; Bleu_2: 0.449; Bleu_3: 0.306; Bleu_4: 0.209; METEOR: 0.211; ROUGE_L: 0.466; CIDEr: 0.667
 * my simple model - 4 epochs:
->
+> ratio: 1.0104244476961306; Bleu_1: 0.636 Bleu_2: 0.448; Bleu_3: 0.305; Bleu_4: 0.209; METEOR: 0.210; ROUGE_L: 0.464; CIDEr: 0.669
 * my simple model - 5 epochs:
->
+> ratio: 1.012540160924407; Bleu_1: 0.632; Bleu_2: 0.446; Bleu_3: 0.306; Bleu_4: 0.211; METEOR: 0.213; ROUGE_L: 0.466; CIDEr: 0.668
 
 **Attention Before LSTM** (`v121_paramsDecoder_withoutFlipTrans_batch_size10_vocabThr3_embedSize512_hiddenSize1024_totEpochs3`)
 * my att first model - 1 epochs:
