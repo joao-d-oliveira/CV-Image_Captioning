@@ -53,7 +53,7 @@ Original [GitHub project](https://github.com/udacity/CVND---Image-Captioning-Pro
 ## Bonus :boom::boom::boom:
 * :white_check_mark: Use the validation set to guide your search for appropriate hyperparameters.
 * :white_check_mark: Tinker with your model - and train it for long enough - to obtain results that are comparable to (or surpass!) recent research articles
-* ❗ Implement beam search to generate captions on new images.
+* :exclamation: Implement beam search to generate captions on new images.
 
 # Results
 
