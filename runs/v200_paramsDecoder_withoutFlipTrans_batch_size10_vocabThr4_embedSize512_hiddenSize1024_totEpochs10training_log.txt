@@ -1,0 +1,257 @@
+RUN_KEY: v2.0.0_params:Decoder_withoutFlipTrans_batch_size:10_vocabThr:4_embedSize:512_hiddenSize:1024_totEpochs:10
+[34.72s] Epoch [1/10], Step [1000/41412], Loss: 4.4161, Perplexity: 82.7740
+
+[34.52s] Epoch [1/10], Step [2000/41412], Loss: 3.9476, Perplexity: 51.8120
+
+[34.43s] Epoch [1/10], Step [3000/41412], Loss: 4.0527, Perplexity: 57.5504
+
+[34.07s] Epoch [1/10], Step [4000/41412], Loss: 3.8966, Perplexity: 49.2371
+
+[34.13s] Epoch [1/10], Step [5000/41412], Loss: 4.3472, Perplexity: 77.2597
+
+[34.31s] Epoch [1/10], Step [6000/41412], Loss: 3.6066, Perplexity: 36.8419
+
+[34.22s] Epoch [1/10], Step [7000/41412], Loss: 4.4088, Perplexity: 82.1739
+
+[33.77s] Epoch [1/10], Step [8000/41412], Loss: 3.8242, Perplexity: 45.7963
+
+[33.90s] Epoch [1/10], Step [9000/41412], Loss: 4.0739, Perplexity: 58.7852
+
+[34.14s] Epoch [1/10], Step [10000/41412], Loss: 3.5987, Perplexity: 36.5522
+
+[34.28s] Epoch [1/10], Step [11000/41412], Loss: 3.7011, Perplexity: 40.4934
+
+[33.98s] Epoch [1/10], Step [12000/41412], Loss: 3.8234, Perplexity: 45.7597
+
+[33.70s] Epoch [1/10], Step [13000/41412], Loss: 4.6071, Perplexity: 100.1890
+
+[33.74s] Epoch [1/10], Step [14000/41412], Loss: 3.7171, Perplexity: 41.1463
+
+[33.96s] Epoch [1/10], Step [15000/41412], Loss: 4.4720, Perplexity: 87.5309
+
+[33.62s] Epoch [1/10], Step [16000/41412], Loss: 3.6912, Perplexity: 40.0928
+
+[33.81s] Epoch [1/10], Step [17000/41412], Loss: 3.8142, Perplexity: 45.3418
+
+[33.97s] Epoch [1/10], Step [18000/41412], Loss: 3.2529, Perplexity: 25.8656
+
+[33.87s] Epoch [1/10], Step [19000/41412], Loss: 3.2774, Perplexity: 26.5061
+
+[33.78s] Epoch [1/10], Step [20000/41412], Loss: 3.5693, Perplexity: 35.4920
+
+[33.60s] Epoch [1/10], Step [21000/41412], Loss: 3.9876, Perplexity: 53.9280
+
+[34.04s] Epoch [1/10], Step [22000/41412], Loss: 4.4251, Perplexity: 83.5230
+
+[33.71s] Epoch [1/10], Step [23000/41412], Loss: 3.6794, Perplexity: 39.6230
+
+[33.91s] Epoch [1/10], Step [24000/41412], Loss: 3.0240, Perplexity: 20.5737
+
+[33.77s] Epoch [1/10], Step [25000/41412], Loss: 4.0423, Perplexity: 56.9580
+
+[33.91s] Epoch [1/10], Step [26000/41412], Loss: 2.9340, Perplexity: 18.8034
+
+[33.91s] Epoch [1/10], Step [27000/41412], Loss: 3.6166, Perplexity: 37.2109
+
+[34.01s] Epoch [1/10], Step [28000/41412], Loss: 4.2025, Perplexity: 66.8509
+
+[34.05s] Epoch [1/10], Step [29000/41412], Loss: 4.9674, Perplexity: 143.6600
+
+[34.04s] Epoch [1/10], Step [30000/41412], Loss: 3.3698, Perplexity: 29.0725
+
+[33.86s] Epoch [1/10], Step [31000/41412], Loss: 3.3311, Perplexity: 27.9704
+
+[33.89s] Epoch [1/10], Step [32000/41412], Loss: 3.1243, Perplexity: 22.7438
+
+[33.72s] Epoch [1/10], Step [33000/41412], Loss: 4.2198, Perplexity: 68.0212
+
+[33.91s] Epoch [1/10], Step [34000/41412], Loss: 3.9007, Perplexity: 49.4390
+
+[33.74s] Epoch [1/10], Step [35000/41412], Loss: 3.2594, Perplexity: 26.0346
+
+[33.94s] Epoch [1/10], Step [36000/41412], Loss: 2.8932, Perplexity: 18.0517
+
+[33.60s] Epoch [1/10], Step [37000/41412], Loss: 3.2632, Perplexity: 26.1329
+
+[34.13s] Epoch [1/10], Step [38000/41412], Loss: 2.9034, Perplexity: 18.2362
+
+[33.84s] Epoch [1/10], Step [39000/41412], Loss: 3.7289, Perplexity: 41.6320
+
+[33.77s] Epoch [1/10], Step [40000/41412], Loss: 3.8837, Perplexity: 48.6045
+
+[33.83s] Epoch [1/10], Step [41000/41412], Loss: 4.6236, Perplexity: 101.8570
+
+[34.59s] Epoch [2/10], Step [1000/41412], Loss: 3.1413, Perplexity: 23.1344
+
+[34.04s] Epoch [2/10], Step [2000/41412], Loss: 4.0358, Perplexity: 56.5889
+
+[33.94s] Epoch [2/10], Step [3000/41412], Loss: 3.7763, Perplexity: 43.6533
+
+[33.69s] Epoch [2/10], Step [4000/41412], Loss: 2.8356, Perplexity: 17.0411
+
+[33.69s] Epoch [2/10], Step [5000/41412], Loss: 3.9140, Perplexity: 50.0996
+
+[33.80s] Epoch [2/10], Step [6000/41412], Loss: 3.6238, Perplexity: 37.4788
+
+[34.47s] Epoch [2/10], Step [7000/41412], Loss: 3.7387, Perplexity: 42.0428
+
+[33.62s] Epoch [2/10], Step [8000/41412], Loss: 3.3581, Perplexity: 28.7359
+
+[34.15s] Epoch [2/10], Step [9000/41412], Loss: 3.2729, Perplexity: 26.3884
+
+[34.16s] Epoch [2/10], Step [10000/41412], Loss: 3.2445, Perplexity: 25.6484
+
+[34.42s] Epoch [2/10], Step [11000/41412], Loss: 3.1195, Perplexity: 22.6360
+
+[33.88s] Epoch [2/10], Step [12000/41412], Loss: 2.8757, Perplexity: 17.7374
+
+[33.78s] Epoch [2/10], Step [13000/41412], Loss: 3.3356, Perplexity: 28.0942
+
+[33.72s] Epoch [2/10], Step [14000/41412], Loss: 3.7316, Perplexity: 41.7449
+
+[34.01s] Epoch [2/10], Step [15000/41412], Loss: 3.8925, Perplexity: 49.0338
+
+[34.05s] Epoch [2/10], Step [16000/41412], Loss: 3.2905, Perplexity: 26.8576
+
+[33.83s] Epoch [2/10], Step [17000/41412], Loss: 2.5336, Perplexity: 12.5982
+
+[33.91s] Epoch [2/10], Step [18000/41412], Loss: 3.4984, Perplexity: 33.0641
+
+[33.67s] Epoch [2/10], Step [19000/41412], Loss: 3.8641, Perplexity: 47.6591
+
+[33.73s] Epoch [2/10], Step [20000/41412], Loss: 3.8059, Perplexity: 44.9644
+
+[33.58s] Epoch [2/10], Step [21000/41412], Loss: 2.8472, Perplexity: 17.2387
+
+[33.90s] Epoch [2/10], Step [22000/41412], Loss: 3.3063, Perplexity: 27.2840
+
+[34.60s] Epoch [2/10], Step [23000/41412], Loss: 3.7396, Perplexity: 42.0821
+
+[33.54s] Epoch [2/10], Step [24000/41412], Loss: 3.0690, Perplexity: 21.5209
+
+[33.68s] Epoch [2/10], Step [25000/41412], Loss: 3.6499, Perplexity: 38.4696
+
+[33.90s] Epoch [2/10], Step [26000/41412], Loss: 4.0976, Perplexity: 60.1976
+
+[33.48s] Epoch [2/10], Step [27000/41412], Loss: 4.2131, Perplexity: 67.5632
+
+[33.86s] Epoch [2/10], Step [28000/41412], Loss: 3.4589, Perplexity: 31.7832
+
+[33.89s] Epoch [2/10], Step [29000/41412], Loss: 2.9698, Perplexity: 19.4886
+
+[34.91s] Epoch [2/10], Step [30000/41412], Loss: 3.0019, Perplexity: 20.1240
+
+[34.26s] Epoch [2/10], Step [31000/41412], Loss: 3.4194, Perplexity: 30.5523
+
+[34.36s] Epoch [2/10], Step [32000/41412], Loss: 3.4388, Perplexity: 31.1498
+
+[34.18s] Epoch [2/10], Step [33000/41412], Loss: 2.8913, Perplexity: 18.0159
+
+[33.80s] Epoch [2/10], Step [34000/41412], Loss: 3.6677, Perplexity: 39.1605
+
+[33.53s] Epoch [2/10], Step [35000/41412], Loss: 3.4948, Perplexity: 32.9422
+
+[34.06s] Epoch [2/10], Step [36000/41412], Loss: 3.7211, Perplexity: 41.3118
+
+[33.51s] Epoch [2/10], Step [37000/41412], Loss: 3.0206, Perplexity: 20.5044
+
+[33.92s] Epoch [2/10], Step [38000/41412], Loss: 3.9406, Perplexity: 51.4475
+
+[33.71s] Epoch [2/10], Step [39000/41412], Loss: 3.0822, Perplexity: 21.8067
+
+[33.73s] Epoch [2/10], Step [40000/41412], Loss: 2.8107, Perplexity: 16.6217
+
+[33.60s] Epoch [2/10], Step [41000/41412], Loss: 3.4465, Perplexity: 31.3896
+
+[34.40s] Epoch [3/10], Step [1000/41412], Loss: 4.4823, Perplexity: 88.4412
+
+[33.79s] Epoch [3/10], Step [2000/41412], Loss: 3.2239, Perplexity: 25.1257
+
+[33.75s] Epoch [3/10], Step [3000/41412], Loss: 4.1775, Perplexity: 65.2012
+
+[33.69s] Epoch [3/10], Step [4000/41412], Loss: 3.4211, Perplexity: 30.6042
+
+[33.83s] Epoch [3/10], Step [5000/41412], Loss: 3.0244, Perplexity: 20.5813
+
+[33.81s] Epoch [3/10], Step [6000/41412], Loss: 3.0238, Perplexity: 20.5690
+
+[33.93s] Epoch [3/10], Step [7000/41412], Loss: 2.9586, Perplexity: 19.2712
+
+[33.79s] Epoch [3/10], Step [8000/41412], Loss: 3.9371, Perplexity: 51.2705
+
+[33.88s] Epoch [3/10], Step [9000/41412], Loss: 2.9472, Perplexity: 19.0518
+
+[33.62s] Epoch [3/10], Step [10000/41412], Loss: 3.9247, Perplexity: 50.6355
+
+[33.94s] Epoch [3/10], Step [11000/41412], Loss: 4.2518, Perplexity: 70.2289
+
+[33.93s] Epoch [3/10], Step [12000/41412], Loss: 3.0527, Perplexity: 21.1731
+
+[33.70s] Epoch [3/10], Step [13000/41412], Loss: 3.9258, Perplexity: 50.6940
+
+[33.64s] Epoch [3/10], Step [14000/41412], Loss: 3.5633, Perplexity: 35.2781
+
+[34.09s] Epoch [3/10], Step [15000/41412], Loss: 2.5595, Perplexity: 12.9297
+
+[34.08s] Epoch [3/10], Step [16000/41412], Loss: 2.7512, Perplexity: 15.6615
+
+[33.76s] Epoch [3/10], Step [17000/41412], Loss: 3.5395, Perplexity: 34.4492
+
+[33.70s] Epoch [3/10], Step [18000/41412], Loss: 2.7808, Perplexity: 16.1313
+
+[33.83s] Epoch [3/10], Step [19000/41412], Loss: 3.5086, Perplexity: 33.4006
+
+[33.77s] Epoch [3/10], Step [20000/41412], Loss: 3.9785, Perplexity: 53.4368
+
+[34.11s] Epoch [3/10], Step [21000/41412], Loss: 4.0759, Perplexity: 58.9012
+
+[34.12s] Epoch [3/10], Step [22000/41412], Loss: 3.0680, Perplexity: 21.4986
+
+[34.29s] Epoch [3/10], Step [23000/41412], Loss: 3.1226, Perplexity: 22.7043
+
+[35.19s] Epoch [3/10], Step [24000/41412], Loss: 3.2135, Perplexity: 24.8672
+
+[34.49s] Epoch [3/10], Step [25000/41412], Loss: 4.1476, Perplexity: 63.2808
+
+[34.34s] Epoch [3/10], Step [26000/41412], Loss: 3.6904, Perplexity: 40.0629
+
+[34.31s] Epoch [3/10], Step [27000/41412], Loss: 3.9571, Perplexity: 52.3063
+
+[34.25s] Epoch [3/10], Step [28000/41412], Loss: 4.1132, Perplexity: 61.1412
+
+[34.36s] Epoch [3/10], Step [29000/41412], Loss: 3.4681, Perplexity: 32.0759
+
+[34.44s] Epoch [3/10], Step [30000/41412], Loss: 3.6505, Perplexity: 38.4937
+
+[34.30s] Epoch [3/10], Step [31000/41412], Loss: 3.8996, Perplexity: 49.3808
+
+[34.67s] Epoch [3/10], Step [32000/41412], Loss: 4.1770, Perplexity: 65.1725
+
+[34.54s] Epoch [3/10], Step [33000/41412], Loss: 3.6104, Perplexity: 36.9819
+
+[34.51s] Epoch [3/10], Step [34000/41412], Loss: 3.3646, Perplexity: 28.9218
+
+[34.54s] Epoch [3/10], Step [35000/41412], Loss: 3.2754, Perplexity: 26.4547
+
+[34.44s] Epoch [3/10], Step [36000/41412], Loss: 3.5483, Perplexity: 34.7553
+
+[35.23s] Epoch [3/10], Step [37000/41412], Loss: 2.9708, Perplexity: 19.5071
+
+[34.70s] Epoch [3/10], Step [38000/41412], Loss: 2.7876, Perplexity: 16.2412
+
+[34.73s] Epoch [3/10], Step [39000/41412], Loss: 3.2277, Perplexity: 25.2223
+
+[34.45s] Epoch [3/10], Step [40000/41412], Loss: 2.9821, Perplexity: 19.7297
+
+[34.43s] Epoch [3/10], Step [41000/41412], Loss: 3.2009, Perplexity: 24.5541
+
+[35.04s] Epoch [4/10], Step [1000/41412], Loss: 3.6351, Perplexity: 37.9073
+
+[34.65s] Epoch [4/10], Step [2000/41412], Loss: 2.3803, Perplexity: 10.8079
+
+[34.41s] Epoch [4/10], Step [3000/41412], Loss: 3.1078, Perplexity: 22.3720
+
+[34.25s] Epoch [4/10], Step [4000/41412], Loss: 3.5158, Perplexity: 33.6437
+
+[34.48s] Epoch [4/10], Step [5000/41412], Loss: 3.1553, Perplexity: 23.4597
+

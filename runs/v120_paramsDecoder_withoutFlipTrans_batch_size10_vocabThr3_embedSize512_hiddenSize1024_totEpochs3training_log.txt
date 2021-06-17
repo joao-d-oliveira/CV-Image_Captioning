@@ -1,0 +1,1 @@
+RUN_KEY: v1.2.0_params:Decoder_withoutFlipTrans_batch_size:10_vocabThr:3_embedSize:512_hiddenSize:1024_totEpochs:3
